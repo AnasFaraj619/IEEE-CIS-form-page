@@ -1,0 +1,164 @@
+.ALL_MID {
+  max-width: 1500px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 0px 80px;
+  gap: 30px;
+}
+
+.ALL_MID h1 {
+  font-size: 2rem;
+  text-align: center;
+  color: #1eb0ff;
+}
+
+.ALL_MID span {
+  letter-spacing: 17px;
+  padding-left: 16px;
+  position: relative;
+}
+
+.ALL_MID span::after {
+  content: "";
+  width: 95%;
+  height: 3px;
+  border-radius: 20px;
+  background-color: #1eb0ff;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -3px;
+}
+
+.date_and_time {
+  display: flex;
+  justify-content: space-between;
+}
+
+.date,
+.time {
+  width: 300px;
+}
+
+.date {
+  border-top-right-radius: 30px;
+}
+
+.time {
+  border-top-left-radius: 30px;
+}
+
+.DTbox {
+  background: #1eb0ff;
+  border: solid 1.5px #84c6ff;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  text-align: left;
+  padding: 20px 20px;
+  color: white;
+
+  transition: ease 0.3s;
+}
+
+.DTbox:hover {
+  transform: scale(1.05);
+}
+
+.DTbox p {
+  margin: 0;
+}
+
+.speaker {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20px 30px;
+  position: relative;
+  border-bottom-right-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+
+.speaker_pic {
+  background-color: gray;
+  border-radius: 200px;
+  width: 120px;
+  height: 120px;
+  position: absolute;
+  right: 40px;
+  top: -15px;
+  overflow: hidden;
+}
+
+.speaker_pic img {
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+  height: 100%;
+}
+
+.speaker_name {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  text-align: left;
+}
+
+.about_the_workshop h2 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.about_the_workshop {
+  padding: 25px 30px;
+}
+
+.join_now_button {
+  width: 100%;
+  padding: 20px 0px;
+  border: none;
+  cursor: pointer;
+  border-bottom-right-radius: 30px;
+  border-bottom-left-radius: 30px;
+  background: #1eb0ff;
+  border: solid 1.5px #84c6ff;
+  color: white;
+
+  transition: ease 0.3s;
+}
+
+.join_now_button:hover {
+  color: #1eb0ff;
+  background-color: white;
+  transform: scale(1.05);
+}
+
+.title {
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .PICTURE {
+    display: hidden;
+  }
+
+  .ALL_MID h1 {
+    font-size: 1.7rem;
+  }
+
+  .ALL_MID span {
+    letter-spacing: 15px;
+    padding-left: 16px;
+    position: relative;
+  }
+
+  .ALL_MID {
+    max-width: 450px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 0px 80px;
+    gap: 30px;
+  }
+}
