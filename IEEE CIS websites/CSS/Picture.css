@@ -1,0 +1,61 @@
+.cropper {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: absolute; /*this fixed the crop code*/
+}
+
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+.PICTURE {
+  display: block;
+  --angle: 0deg;
+  width: 600px;
+  max-width: 600px;
+  height: 100%;
+  position: relative;
+  background: conic-gradient(
+    from var(--angle),
+    rgb(15, 119, 246),
+    rgb(1, 75, 167),
+    rgb(4, 124, 204),
+    rgb(59, 186, 255),
+    rgb(15, 119, 246)
+  );
+  animation: 6s spin linear infinite;
+}
+
+@keyframes spin {
+  from {
+    --angle: 0deg;
+  }
+
+  to {
+    --angle: 360deg;
+  }
+}
+
+.PICTURE img {
+  transform: scaleX(-1);
+}
+
+.PICTURE #Pic1 {
+  position: absolute;
+  z-index: 1;
+  left: -130px;
+}
+.PICTURE #Pic2 {
+  position: absolute;
+  z-index: 2;
+  left: -50px;
+}
+
+@media (max-width: 768px) {
+  .PICTURE {
+    display: hidden;
+  }
+}
